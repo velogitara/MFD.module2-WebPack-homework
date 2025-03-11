@@ -10,7 +10,7 @@
     "build:dev": "npx webpack --config webpack.config.dev.js",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "deploy": "gh-pages -d dist",
-    "format": "npx prettier --write.",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "precommit": "npm run lint && npm run format",
     "release": "npx standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,13 +23,16 @@
   "author": "velogitara",
   "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.24.1",
-    "@typescript-eslint/parser": "^8.24.1",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.0",
     "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-webpack-plugin": "^4.2.0",
     "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
@@ -37,6 +40,7 @@
     "postcss": "^8.5.2",
     "postcss-loader": "^8.1.1",
     "postcss-preset-env": "^10.1.4",
+    "prettier": "^3.5.3",
     "sass": "^1.85.0",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
@@ -56,4 +60,3 @@
     "react-dom": "^19.0.0"
   }
 }
-

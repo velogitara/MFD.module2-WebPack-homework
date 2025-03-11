@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 interface VolumeControlProps {
   volume: number;
   setVolume: (value: number) => void;
@@ -22,9 +22,8 @@ const VolumeControl: React.FC<VolumeControlProps> = ({
     }
 
     setVolume(newVolume);
-    if (currentSound) {
-      currentSound.volume = newVolume;
-    }
+
+    if (currentSound) currentSound.volume = newVolume;
   };
   return (
     <div className="volumeRange" onWheel={handleWheel}>

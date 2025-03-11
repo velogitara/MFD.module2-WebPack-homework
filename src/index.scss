@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.ttf') format('truetype');
 }
 * {
   padding: 0;
@@ -9,7 +9,7 @@
 }
 html,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .wrapper {
   position: relative;
