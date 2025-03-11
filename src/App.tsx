@@ -1,23 +1,23 @@
-import React from "react";
-import { useState } from "react";
-import Header from "./components/Header";
-import Buttons from "./components/Buttons";
-import VolumeControl from "./components/VolumeControl";
-import Background from "./components/Background";
+import React from 'react';
+import { useState } from 'react';
+import Header from './components/Header';
+import Buttons from './components/Buttons';
+import VolumeControl from './components/VolumeControl';
+import Background from './components/Background';
 
-import { sounds } from "./data/sounds";
-import { Sound } from "./data/sounds";
+import { sounds } from './data/sounds';
+import { Sound } from './data/sounds';
 
 export function App() {
   const [currentSound, setCurrentSound] = useState<HTMLAudioElement | null>(
-    null
+    null,
   );
-  const [currentSoundName, setCurrentSoundName] = useState<Sound["name"]>("");
-  const [currentSoundIcon, setCurrentSoundIcon] = useState<Sound["icon"]>("");
+  const [currentSoundName, setCurrentSoundName] = useState<Sound['name']>('');
+  const [currentSoundIcon, setCurrentSoundIcon] = useState<Sound['icon']>('');
   const [volume, setVolume] = useState<number>(0.5);
-  const [bg, setBg] = useState<Sound["bg"]>(sounds[0].bg);
-  const [textColor, setTextColor] = useState<Sound["textColor"]>(
-    sounds[0].textColor
+  const [bg, setBg] = useState<Sound['bg']>(sounds[0].bg);
+  const [textColor, setTextColor] = useState<Sound['textColor']>(
+    sounds[0].textColor,
   );
 
   const playSound = (sound: Sound): void => {
@@ -56,13 +56,12 @@ export function App() {
           currentSoundIcon={currentSoundIcon}
           currentSoundName={currentSoundName}
         />
-        {currentSound && (
-          <VolumeControl
-            volume={volume}
-            currentSound={currentSound}
-            setVolume={setVolume}
-          />
-        )}
+
+        <VolumeControl
+          volume={volume}
+          currentSound={currentSound}
+          setVolume={setVolume}
+        />
       </div>
     </div>
   );

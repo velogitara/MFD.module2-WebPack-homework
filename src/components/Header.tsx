@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface HeaderPorps {
   textColor: string;
@@ -11,7 +11,7 @@ const Header: React.FC<HeaderPorps> = ({ textColor }) => {
         color: textColor,
       }}
     >
-      Weather Sounds{" "}
+      Weather Sounds{' '}
     </h1>
   );
 };
