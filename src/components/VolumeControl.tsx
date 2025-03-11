@@ -10,6 +10,7 @@ const VolumeControl: React.FC<VolumeControlProps> = ({
   setVolume,
   currentSound,
 }) => {
+  if (!currentSound) return null;
   const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
     e.preventDefault();
     const step = 0.05;
@@ -22,9 +23,8 @@ const VolumeControl: React.FC<VolumeControlProps> = ({
     }
 
     setVolume(newVolume);
-    if (currentSound) {
-      currentSound.volume = newVolume;
-    }
+
+    currentSound.volume = newVolume;
   };
   return (
     <div className="volumeRange" onWheel={handleWheel}>
